@@ -3,7 +3,11 @@ The format is based on [*Keep a Changelog*](https://keepachangelog.com/en/1.0.0/
 
 ## [Unreleased]
 
-## [1.0.0] 2023-01-09
+## [1.1.0] - 2023-05-03
+### Added
+- Add example data
+
+## [1.0.0] - 2023-01-09
 ### Added
 - STREC-3864: Initalize project
     - Add ontology
