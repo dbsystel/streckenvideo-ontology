@@ -1,6 +1,6 @@
 # Streckenvideo-Ontology
 
-This is the ontology used by the Streckenvideo-Knowledge-Graph. The ontology was serialized using the Turtle format (.ttl). It is available in english and in german.
+This is the ontology used by the Streckenvideo team at DB. The ontology was serialized using the turtle format (.ttl).
 
 ## Licence
 
