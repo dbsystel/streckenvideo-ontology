@@ -1,0 +1,287 @@
+@prefix : <http://www.streckenkenntnis.com/knowledge-graph/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.streckenkenntnis.com/knowledge-graph/ontology/> .
+
+<http://www.streckenkenntnis.com/knowledge-graph/ontology> rdf:type owl:Ontology ;
+                                                            owl:versionIRI <http://www.streckenkenntnis.com/knowledge-graph/ontology/2.0.0> .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/aufVzgStrecke
+:aufVzgStrecke rdf:type owl:ObjectProperty ;
+               rdfs:domain :Infrastrukturelement ;
+               rdfs:range :VzgStrecke .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmeVzgStrecke
+:hatAufnahmeVzgStrecke rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Infrastrukturaufnahme ;
+                       rdfs:range :VzgStrecke .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatBetriebsstellentyp
+:hatBetriebsstellentyp rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Betriebsstelle ;
+                       rdfs:range :Betriebsstellentyp .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatEndBetriebsstelle
+:hatEndBetriebsstelle rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Streckenvideo ;
+                      rdfs:range :Betriebsstelle .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatInfrastrukturaufnahme
+:hatInfrastrukturaufnahme rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Streckenvideo ;
+                          rdfs:range :Infrastrukturaufnahme .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatLaBereich
+:hatLaBereich rdf:type owl:ObjectProperty ;
+              rdfs:domain :LaStrecke ;
+              rdfs:range :LaBereich .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatLaStreckenabschnitt
+:hatLaStreckenabschnitt rdf:type owl:ObjectProperty ;
+                        rdfs:domain :VzgStrecke ;
+                        rdfs:range :LaStreckenabschnitt .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatSignaltyp
+:hatSignaltyp rdf:type owl:ObjectProperty ;
+              rdfs:domain :Signal ;
+              rdfs:range :Signaltyp .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatStartBetriebsstelle
+:hatStartBetriebsstelle rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Streckenvideo ;
+                        rdfs:range :Betriebsstelle .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatTunnelEndeAufStrecke
+:hatTunnelEndeAufStrecke rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Tunnel ;
+                         rdfs:range :VzgStrecke .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/vonLaStrecke
+:vonLaStrecke rdf:type owl:ObjectProperty ;
+              rdfs:domain :LaStreckenabschnitt ;
+              rdfs:range :LaStrecke .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/zeigtInfrastrukturelement
+:zeigtInfrastrukturelement rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Infrastrukturaufnahme ;
+                           rdfs:range :Infrastrukturelement .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmeKilometrierung
+:hatAufnahmeKilometrierung rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Infrastrukturaufnahme ;
+                           rdfs:range xsd:float .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmedatum
+:hatAufnahmedatum rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Streckenvideo ;
+                  rdfs:range xsd:date .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmejahr
+:hatAufnahmejahr rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Streckenvideo ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmekalenderwoche
+:hatAufnahmekalenderwoche rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Streckenvideo ;
+                          rdfs:range xsd:integer .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmelaenge
+:hatAufnahmelaenge rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Streckenvideo ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmemonat
+:hatAufnahmemonat rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Streckenvideo ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatAufnahmetag
+:hatAufnahmetag rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Streckenvideo ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatBetriebsstellenname
+:hatBetriebsstellenname rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Betriebsstelle ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatBetriebsstellentypBezeichnung
+:hatBetriebsstellentypBezeichnung rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :Betriebsstellentyp ;
+                                  rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatDS100
+:hatDS100 rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Betriebsstelle ;
+          rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatEndKilometrierung
+:hatEndKilometrierung rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :LaStreckenabschnitt ;
+                      rdfs:range xsd:float .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatGleislage
+:hatGleislage rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Infrastrukturaufnahme ;
+              rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatKilometrierung
+:hatKilometrierung rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Infrastrukturelement ;
+                   rdfs:range xsd:float .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatOriginID
+:hatOriginID rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Streckenvideo ;
+             rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatSekundeInStreckenvideo
+:hatSekundeInStreckenvideo rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Infrastrukturaufnahme ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatSignaltypBezeichnung
+:hatSignaltypBezeichnung rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Signaltyp ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatStartKilometrierung
+:hatStartKilometrierung rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :LaStreckenabschnitt ;
+                        rdfs:range xsd:float .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatStreckennummer
+:hatStreckennummer rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Strecke ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatTunnelEndKilometrierung
+:hatTunnelEndKilometrierung rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Tunnel ;
+                            rdfs:range xsd:float .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatUUID
+:hatUUID rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Streckenvideo ;
+         rdfs:range xsd:string .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/hatZugnummer
+:hatZugnummer rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Streckenvideo ;
+              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Betriebsstelle
+:Betriebsstelle rdf:type owl:Class ;
+                rdfs:subClassOf :Infrastrukturelement .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Betriebsstellentyp
+:Betriebsstellentyp rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Infrastrukturaufnahme
+:Infrastrukturaufnahme rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Infrastrukturelement
+:Infrastrukturelement rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/LaBereich
+:LaBereich rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/LaStrecke
+:LaStrecke rdf:type owl:Class ;
+           rdfs:subClassOf :Strecke .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/LaStreckenabschnitt
+:LaStreckenabschnitt rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Signal
+:Signal rdf:type owl:Class ;
+        rdfs:subClassOf :Infrastrukturelement .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Signaltyp
+:Signaltyp rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Strecke
+:Strecke rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Streckenvideo
+:Streckenvideo rdf:type owl:Class .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/Tunnel
+:Tunnel rdf:type owl:Class ;
+        rdfs:subClassOf :Infrastrukturelement .
+
+
+###  http://www.streckenkenntnis.com/knowledge-graph/ontology/VzgStrecke
+:VzgStrecke rdf:type owl:Class ;
+            rdfs:subClassOf :Strecke .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

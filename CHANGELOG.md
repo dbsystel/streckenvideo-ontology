@@ -1,13 +1,26 @@
 # Changelog
-The format is based on [*Keep a Changelog*](https://keepachangelog.com/en/1.0.0/) and the project adheres to [*Semantic Versioning*](https://semver.org/spec/v2.0.0.html).
+
+The format is based on [_Keep a Changelog_](https://keepachangelog.com/en/1.0.0/) and the project adheres to [_Semantic Versioning_](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [1.1.0] - 2023-05-03
+## [2.0.0] - 2024-11-26
+
+### Changed
+
+- The ontology got updated to version 2.0.0
+- The example dataset has been updated to follow the structure of the new ontology
+- The example dataset has been enlarged
+
+## [1.1.0] - 2024-05-03
+
 ### Added
+
 - Add example data
 
-## [1.0.0] - 2023-01-09
+## [1.0.0] - 2024-01-09
+
 ### Added
-- STREC-3864: Initalize project
-    - Add ontology
+
+- Initalize project
+  - Add ontology
